@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import {GifExpertApp} from './App';
 import reportWebVitals from './reportWebVitals';
-import { FirstApp } from './FirstApp';
+import { Counter } from './Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <FirstApp title = "parce" sum={2}/>
+    <Counter value = {0}/>
+    <GifExpertApp />
   </React.StrictMode>
 );
 

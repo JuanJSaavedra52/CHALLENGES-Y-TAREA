@@ -1,0 +1,38 @@
+import { useState } from "react"
+
+export const AddCategory = ({onAddCategory}) => {
+    const [inputValue, setinputValue] = useState('...')
+
+    const onInputChange = (evt) => {
+        setinputValue(evt.target.value)
+    }
+
+    const onSubmit = (evt) => {
+        evt.preventDefault();
+        onAddCategory( inputValue);
+        setinputValue('')
+    }
+
+    const feliz = () => {
+        alert("Felicitaciones imbecil")
+    }
+
+    return (
+        
+        <>
+        <form onSubmit={(event) => onSubmit(event)}>
+            <input
+                type="text"
+                placeholder="Buscar"
+                value={ inputValue}
+                onChange={ (event) => onInputChange(event)}
+            />
+            <button>cosa</button>
+        </form>
+        <button onClick={() => feliz()}>No me toqué</button>
+        </>
+        
+    )
+
+
+}

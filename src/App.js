@@ -1,13 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from "react"
+import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
-function App() {
+export const GifExpertApp = () => {
+
+  const [categories, setCategories] = useState(['Zodiac'])
+
+  const onAddCategory = ( category ) => {
+    setCategories(list => [...list, category])
+  }
+
   return (
     <>
-      <h1> Hola Mundo!</h1>
-      <h2> Bienvenido</h2>
+      <h1>GifExpert</h1>
+      <AddCategory onAddCategory={onAddCategory} />
+      {
+        categories.map(
+          (category, key) => 
+          {
+            return <GifGrid category={ category } key={key} />
+          }
+        )
+      }
     </>
-  );
+  )
 }
-
-export default App;
