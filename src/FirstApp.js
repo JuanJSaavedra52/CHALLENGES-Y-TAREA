@@ -1,4 +1,7 @@
-const FirstApp = (props) => {
+import React from "react"
+
+const FirstApp = ( props ) => {
+    
     return (
         <>
             <h1> { props.title } </h1>
