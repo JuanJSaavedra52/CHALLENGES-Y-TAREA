@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import './FirstApp'
 import FirstApp from './FirstApp';
 
 const App = () => {
 
   return (
     <>
-      <FirstApp />
+      <FirstApp title = "My First App"/>
     </>
   )
 }
