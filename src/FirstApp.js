@@ -1,9 +1,7 @@
-const title = 'First App';
-
-const FirstApp = ({title}) => {
+const FirstApp = (props) => {
     return (
         <>
-            <h1> { title } </h1>
+            <h1> { props.title } </h1>
             <span> 10 </span>
         </>
     )
