@@ -1,4 +1,4 @@
-export const GifGrid = () => {
+export const GifGrid = ({category}) => {
 
     console.log(category)
 
