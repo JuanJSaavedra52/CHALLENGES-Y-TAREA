@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FirstApp from './FirstApp';
 import { GiftExpertApp } from './GiftExpertApp';
+import { GifGrid } from './components/GifGrid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <FirstApp value={0}/>
     <GiftExpertApp />
+    <GifGrid />
   </React.StrictMode>
 );
 
