@@ -1,11 +1,11 @@
 import { useEffect, useState} from "react"
-import { GetGifs } from "../components/GetGifs"
+import { getGifs } from "../components/getGifs"
 
 export const useFetchGifs = (category) => {
     const[images, setImages] = useState([]);
 
     const getImages = async() => {
-        const images = await GetGifs(category)
+        const images = await getGifs(category)
         setImages(images);
     }
 
