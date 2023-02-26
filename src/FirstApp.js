@@ -3,17 +3,17 @@ import { useState } from "react"
 import { useCounter } from "./hooks/useCounter"
 
 const FirstApp = ({value}) => {
-    const {counter, setCounter} = useCounter(value)
+    const {count, increment, decrement, reset} = useCounter(value)
 
 
     return (
         <>
 
             <h1> Counter </h1>
-            <span> { counter } </span>
-            <button onClick={ () => Increment }>+1</button>
-            <button onClick={ () => Decrement }>-1</button>
-            <button onClick={ () => Reset }>Reset</button>
+            <span> { count } </span>
+            <button onClick={ () => increment() }>+1</button>
+            <button onClick={ () => decrement() }>-1</button>
+            <button onClick={ () => reset() }>Reset</button>
         </>
     )
 }
