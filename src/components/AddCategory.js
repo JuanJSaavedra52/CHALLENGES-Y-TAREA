@@ -13,10 +13,6 @@ export const AddCategory = ({onAddCategory}) => {
         setinputValue('')
     }
 
-    const feliz = () => {
-        alert("Felicitaciones imbecil")
-    }
-
     return (
         
         <>
@@ -29,7 +25,6 @@ export const AddCategory = ({onAddCategory}) => {
             />
             <button>cosa</button>
         </form>
-        <button onClick={() => feliz()}>No me toqué</button>
         </>
         
     )
