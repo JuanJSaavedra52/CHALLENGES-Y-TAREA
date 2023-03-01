@@ -5,13 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import FirstApp from './FirstApp';
 import { GiftExpertApp } from './GiftExpertApp';
 import { GifGrid } from './components/GifGrid';
+import { MultipleCustomHooks } from './components/MultipleCustomHooks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <FirstApp value={0}/>
+    <MultipleCustomHooks />
      <GiftExpertApp />
     <GifGrid />
+    
   </React.StrictMode>
 );
 
