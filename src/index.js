@@ -5,17 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import FirstApp from './FirstApp';
 import { GiftExpertApp } from './GiftExpertApp';
 import { GifGrid } from './components/GifGrid';
-import { MultipleCustomHooks } from './components/MultipleCustomHooks';
+import { Memorize } from './components/Memorize';
+import { Father } from './components/Father';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <FirstApp value={0}/>
-    <MultipleCustomHooks />
-     <GiftExpertApp />
+  <>
+    <FirstApp value={0} />
+    <Father />
+    <Memorize />
+    <GiftExpertApp />
     <GifGrid />
-    
-  </React.StrictMode>
+  </>
+
+
 );
 
 // If you want to start measuring performance in your app, pass a function
