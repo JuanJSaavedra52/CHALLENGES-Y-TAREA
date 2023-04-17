@@ -1,7 +1,9 @@
-export const ShowIncrement = ({incrementFather}) => {
+export const ShowIncrement = ({ incrementFather }) => {
 
     return (
-        <button onClick={() => incrementFather( 5 )}>
+        <button
+            onClick={() => incrementFather(5)}
+        >
             Increment
         </button>
     )

@@ -1,16 +1,16 @@
-import { memo } from "react"
-import { useState } from "react"
+import { memo, useCallback, useState } from "react"
 import { Son } from "./Son"
 
-// INCOMPLETO*******************************
+// Intentando
 
 export const Father = memo(() => {
     const list = [2, 4, 6, 8, 10]
     const [valor, setValor] = useState(0)
 
-    const increment = ( num ) => {
-        setValor( valor + num )
-    }
+    const increment = useCallback((num) => {
+        setValor((value) => value + num);
+      }, []);
+
     return (
         <div>
             <h1> Father </h1>
@@ -26,7 +26,7 @@ export const Father = memo(() => {
                             increment={ increment } 
                         />
                     )
-                })
+                    })
             }
         </div>
     )

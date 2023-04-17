@@ -9,6 +9,7 @@ export const Memorize = () => {
     return (
         <>
             <h1>Memorize <Small value={count} /></h1>
+            <h1> Small: <Small value={counter}/> </h1>
             <hr />
 
             <button
