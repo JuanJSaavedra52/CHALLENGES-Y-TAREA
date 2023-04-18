@@ -7,12 +7,12 @@ import { GiftExpertApp } from './GiftExpertApp';
 import { GifGrid } from './components/GifGrid';
 import { Memorize } from './components/Memorize';
 import { Father } from './components/Father';
+import { TodoApp } from './components/TodoApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    {/* <FirstApp value={0} /> */}
-    <Father />
+    <TodoApp />
   </>
 
 
