@@ -1,7 +1,11 @@
+import React from 'react'
+import { NavComponent } from '../components/NavComponent'
+
 export const AboutPage = () => {
     return (
         <div>
-            <h1>hola</h1>
+            <NavComponent/>
+            <h1>About page</h1>
         </div>
     )
 }
