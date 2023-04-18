@@ -11,11 +11,8 @@ import { Father } from './components/Father';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <FirstApp value={0} />
+    {/* <FirstApp value={0} /> */}
     <Father />
-    <Memorize />
-    <GiftExpertApp />
-    <GifGrid />
   </>
 
 
