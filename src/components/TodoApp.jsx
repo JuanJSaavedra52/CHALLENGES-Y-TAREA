@@ -1,31 +1,19 @@
-import { useState } from "react";
 import { TodoList } from "./TodoList";
 import { TodoForm } from "./TodoForm";
+import { useTodo } from "../hooks/useTodo";
 
 export const TodoApp = () => {
-    const [todos, setTodos] = useState([
-      {
-        id: new Date().getTime(),
-        description: 'Hacer los challenges',
-        done: false,
-      },
-    ]);
-  
-    const addTodo = (newTodo) => {
-      setTodos([...todos, newTodo]);
-    };
-  
-    const deleteTodo = (id) => {
-      setTodos(todos.filter((todo) => todo.id !== id));
-    };
+  const {todos, addTodo, deleteTodo, toggleTodo, countTodos, countPendingTodos} = useTodo();
   
     return (
       <>
         <h1>TodoApp</h1>
         <hr />
         <div>
-          <TodoList todos={todos} deleteTodo={deleteTodo} />
+          <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
           <TodoForm addTodo={addTodo} />
+          <p>Total todos: {countTodos()}</p>
+          <p>Pending todos: {countPendingTodos()}</p>
         </div>
       </>
     );
