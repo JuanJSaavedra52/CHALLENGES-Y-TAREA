@@ -1,24 +1,24 @@
 import { useState } from "react";
 
  export const TodoForm = ({ addTodo }) => {
-    const [newTodo, setNewTodo] = useState('');
+    const [nuevoTodo, setNuevoTodo] = useState('');
   
-    const handleSubmit = (e) => {
-      e.preventDefault();
+    const newTodo = (evt) => {
+      evt.preventDefault();
       addTodo({
         id: new Date().getTime(),
-        description: newTodo,
+        description: nuevoTodo,
         done: false,
       });
-      setNewTodo('');
+      setNuevoTodo('');
     };
   
     return (
       <div>
         <h4>Agregar TODO</h4>
         <hr />
-        <form onSubmit={handleSubmit}>
-          <input value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+        <form onSubmit={newTodo}>
+          <input value={nuevoTodo} onChange={(evt) => setNuevoTodo(evt.target.value)} />
           <button>Agregar</button>
         </form>
       </div>
