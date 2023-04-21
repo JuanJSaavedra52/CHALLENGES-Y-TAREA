@@ -9,10 +9,13 @@ export const MainApp = () => {
     return (
 
         // <NavLink to="products/J" >Product by ID</NavLink>
-            <Routes>
-                <Route path="products">
-                    <Route path=':id' element={<ProductsPage/>}/>
-                </Route>
-            </Routes>
+        <Routes>
+            <Route path="products">
+                <Route path=':id' element={<ProductsPage />} />
+            </Route>
+            <Route path='/' element={<LoginPage/>}/>
+            <Route path='/home' element={<HomePage/>}/>
+            <Route path='/about' element={<AboutPage/>}/>
+        </Routes>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export const ProductsPage = () => {
     const { id } = useParams()

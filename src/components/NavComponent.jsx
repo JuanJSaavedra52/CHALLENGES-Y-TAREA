@@ -17,7 +17,7 @@ export const NavComponent = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/login" activeClassName={styles.active}>
+                    <NavLink to="/" activeClassName={styles.active}>
                         Login
                     </NavLink>
                 </li>
