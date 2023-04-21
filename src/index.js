@@ -5,14 +5,22 @@ import reportWebVitals from './reportWebVitals';
 import { MainApp } from './pages/MainApp';
 import { HomePage } from './pages/HomePage';
 import { BrowserRouter } from 'react-router-dom';
+import { App } from './App';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+/*ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
       <MainApp />
   </BrowserRouter>
 );
 
-reportWebVitals();
+reportWebVitals();*/
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+      <App />
+  </Provider>
+)
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(
