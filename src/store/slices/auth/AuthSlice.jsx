@@ -16,12 +16,32 @@ export const AuthSlice = createSlice({
             state.email = action.payload.email
         },
         logout: (state, action) => {
-
+            state.uid = null
+            state.email = null
+            state.displayName = null
+            state.photoUrl = null
         },
         checkingCredentials: (state, action) => {
             console.log('checking')
-        }
+        },
+        loginStart: (state) => {
+            state.loading = true;
+            state.error = null;
+        },
+        loginSuccess: (state, action) => {
+            state.loading = false;
+            state.user = action.payload;
+        },
+        loginFailure: (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+        },
+        logout: (state) => {
+            state.user = null;
+            state.error = null;
+            state.loading = false;
+        },
     }
 })
 
-export const { login, logout, checkingCredentials, register } = AuthSlice.actions
+export const { login, logout, checkingCredentials, register, loginStart, loginSuccess, loginFailure, } = AuthSlice.actions

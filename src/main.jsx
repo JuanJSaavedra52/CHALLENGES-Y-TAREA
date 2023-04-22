@@ -6,8 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { Registro } from "./Registro";
 import reportWebVitals from './reportWebVitals';
-
-
+import {Login} from "./Login";
 /*ReactDOM.render(
     <BrowserRouter>
         <MainApp />
@@ -18,7 +17,8 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
         <BrowserRouter>
-            <Registro />
+            {/* <Registro /> */}
+            <Login />
         </BrowserRouter>
     </Provider>
 )
