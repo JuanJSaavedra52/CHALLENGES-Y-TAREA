@@ -1,20 +1,25 @@
 import { TodoList } from "./TodoList";
 import { TodoForm } from "./TodoForm";
 import { useTodo } from "../hooks/useTodo";
+import { useState } from "react";
+import { useGetTodoIdQuery } from "../api/todosApi";
 
 export const TodoApp = () => {
-  const {todos, addTodo, deleteTodo, toggleTodo, countTodos, countPendingTodos} = useTodo();
-  
-    return (
-      <>
-        <h1>TodoApp</h1>
-        <hr />
-        <div>
-          <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
-          <TodoForm addTodo={addTodo} />
-          <p>Total todos: {countTodos()}</p>
-          <p>Pending todos: {countPendingTodos()}</p>
-        </div>
-      </>
-    );
-  };
+  const [id, setId] = useState(1);
+
+  const { data, isLoading } = useGetTodoIdQuery(id);
+
+  return (
+    <>
+      <h1>Todo App ID</h1>
+      <hr />
+
+      <h4> isLoading: {isLoading ? 'True' : 'False'} </h4>
+
+      <li>{data?.title}</li>
+      <button onClick={() => setId(id - 1)}>Prev ToDo</button>
+      <button onClick={() => setId(id + 1)}>Next ToDo</button>
+
+    </>
+  );
+};
