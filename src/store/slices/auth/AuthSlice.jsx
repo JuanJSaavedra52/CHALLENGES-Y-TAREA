@@ -1,9 +1,9 @@
 import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
 
-export const AuthSlice = () => ({
+export const AuthSlice = createSlice({
     name: 'auth',
-    intialState: {
+    initialState: {
         status: 'checking',
         uid: null,
         email: null,
@@ -24,4 +24,4 @@ export const AuthSlice = () => ({
     }
 })
 
-export const { login, logout, checkingCredentials, } = AuthSlice.actions
+export const { login, logout, checkingCredentials, register } = AuthSlice.actions

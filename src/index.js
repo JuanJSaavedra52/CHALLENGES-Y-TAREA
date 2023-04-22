@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { MainApp } from './pages/MainApp';
-import { HomePage } from './pages/HomePage';
 import { BrowserRouter } from 'react-router-dom';
-import { App } from './App';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import { Registro } from './Registro';
 
 /*ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -18,9 +16,17 @@ import { store } from './store/store';
 reportWebVitals();*/
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-      <App />
+      <BrowserRouter>
+          <Registro />
+      </BrowserRouter>
   </Provider>
 )
+reportWebVitals();
+/*ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+      <App />
+  </Provider>
+)*/
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(
